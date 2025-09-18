@@ -1,4 +1,8 @@
 const Root = document.getElementById("root");
+const listItem = {
+    0:["بار سرد" , "picture link"],
+    }
+
 
 const logo = document.createElement("div");
 logo.id = "logo";
@@ -17,15 +21,24 @@ function animationFunction() {
 setTimeout(animationFunction, 1000);
 setTimeout(() => {
   Root.innerHTML = "";
-}, 4100);
-const menu = document.createElement("div");
-menu.id = "menu";
-menu.className = "menu";
-Root.appendChild(menu);
+  const menu = document.createElement("div");
+  menu.id = "menu";
+  menu.className = "menu";
+  Root.appendChild(menu);
 
-for (let item = 0; item < 5; item++) {
+for (let item = 1; item < 5; item++) {
   const newItem = document.createElement("div");
   newItem.id = `box-${item}`;
   newItem.className = "menu-item";
   menu.appendChild(newItem);
+
+  const picItem = document.createElement("div");
+    picItem.id = 'picItem';
+    newItem.appendChild(picItem);
+   const nameItem =  document.createElement('div');
+    nameItem.id = "nameItem";
+    nameItem.innerHTML = "نوشیدنی گرم";
+    newItem.appendChild(nameItem);
 }
+
+}, 4100);
