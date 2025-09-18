@@ -1,0 +1,95 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: "pelak";
+    src: url(../fonts/PelakFA-Regular.ttf); 
+    src: url(../fonts/PelakFA-Bold.ttf)
+}
+#root {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+body {
+    background-color:#080808;
+    font-family: "pelak";
+}
+#logo {
+    width:200px;
+    height:60vh;
+    background-image: url(../images/logo.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
+#welcome {
+   font-family:"pelak";
+   font-size: 24px;
+   color: #ffff;
+}
+.animation-first-page {
+  animation: animationFirst 3s ease-in-out forwards;
+}
+.animation-text {
+  animation: animationText 3s ease-in-out forwards;
+}
+#menu {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.menu-item {
+    width:50%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes animationFirst {
+  0% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0) rotate(1080deg);
+    opacity: 0;
+  }
+}
+@keyframes animationText {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+
